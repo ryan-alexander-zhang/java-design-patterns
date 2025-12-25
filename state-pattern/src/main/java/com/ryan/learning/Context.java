@@ -4,11 +4,9 @@ import lombok.Getter;
 
 @Getter
 public class Context {
-  private String extraInfo;
   private State state;
 
   public Context() {
-    extraInfo = "Initial Info";
     state = null;
   }
 
@@ -18,7 +16,7 @@ public class Context {
 
   public void request() {
     if (state != null) {
-      state.doAction(this);
+      state.doAction();
     }
   }
 }
