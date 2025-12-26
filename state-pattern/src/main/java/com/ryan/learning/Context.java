@@ -14,9 +14,9 @@ public class Context {
     this.state = state;
   }
 
-  public void request() {
+  public void execute() {
     if (state != null) {
-      state.doAction();
+      state.execute(this);
     }
   }
 }

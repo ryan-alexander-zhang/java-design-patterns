@@ -1,5 +1,5 @@
 package com.ryan.learning;
 
 public interface State {
-  void doAction();
+  void execute(Context context);
 }

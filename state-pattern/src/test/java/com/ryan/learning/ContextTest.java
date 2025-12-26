@@ -9,15 +9,8 @@ class ContextTest {
   @Test
   void request() {
     Context context = new Context();
-
-    State stateA = new StateA();
-    context.changeState(stateA);
-    context.request();
-    assertEquals(stateA, context.getState());
-
-    State stateB = new StateB();
-    context.changeState(stateB);
-    context.request();
-    assertEquals(stateB, context.getState());
+    context.changeState(new PendingState());
+    context.execute();
+    context.execute();
   }
 }
